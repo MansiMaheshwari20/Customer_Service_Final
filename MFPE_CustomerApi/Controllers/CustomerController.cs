@@ -59,8 +59,8 @@ namespace MFPE_CustomerApi.Controllers
                 return NotFound();
             }
             
-                bool a = _provider.Add(customer);
-                if (a)
+                bool result = _provider.Add(customer);
+                if (result)
                 {
                     _log4net.Info("Customer has been successfully created");
                     CustomerCreationStatus cts = new CustomerCreationStatus();
